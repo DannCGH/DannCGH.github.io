@@ -1469,7 +1469,7 @@
           <p class="skills-cat-title" data-en="// Languages" data-es="// Lenguajes">// Languages</p>
           <div class="tech-pills reveal"><span class="tech-pill">JavaScript</span><span class="tech-pill">TypeScript</span><span class="tech-pill">Python</span><span class="tech-pill">Java</span><span class="tech-pill">C</span><span class="tech-pill">C++</span><span class="tech-pill">SQL</span><span class="tech-pill">HTML / CSS</span><span class="tech-pill">Bash</span><span class="tech-pill">Kotlin</span></div>
           <p class="skills-cat-title" data-en="// Frameworks" data-es="// Frameworks">// Frameworks</p>
-          <div class="tech-pills reveal"><span class="tech-pill">React</span><span class="tech-pill">Next.js</span><span class="tech-pill">Node.js</span><span class="tech-pill">Express</span><span class="tech-pill">Vue.js</span><span class="tech-pill">FastAPI</span></div>
+          <div class="tech-pills reveal"><span class="tech-pill">React</span><span class="tech-pill">Spring Boot</span><span class="tech-pill">Next.js</span><span class="tech-pill">Node.js</span><span class="tech-pill">Flask</span><span class="tech-pill">Express</span><span class="tech-pill">Vue.js</span><span class="tech-pill">PyTorch</span><span class="tech-pill">FastAPI</span></div>
         </div>
         <div>
           <p class="skills-cat-title" data-en="// Cloud &amp; DevOps" data-es="// Cloud y DevOps">// Cloud &amp; DevOps</p>
@@ -1994,50 +1994,7 @@
     // To swap in your own sound: replace playRippleSound() with:
     //   const sfx = new Audio('sounds/your-file.mp3'); sfx.play();
     function playRippleSound() {
-      try {
-        const ac = new (window.AudioContext || window.webkitAudioContext)();
-
-        // Layer 1: deep bass thud
-        const thud = ac.createOscillator();
-        const thudGain = ac.createGain();
-        thud.type = 'sine';
-        thud.frequency.setValueAtTime(80, ac.currentTime);
-        thud.frequency.exponentialRampToValueAtTime(30, ac.currentTime + 0.6);
-        thudGain.gain.setValueAtTime(0.6, ac.currentTime);
-        thudGain.gain.exponentialRampToValueAtTime(0.001, ac.currentTime + 0.7);
-        thud.connect(thudGain);
-        thudGain.connect(ac.destination);
-        thud.start(ac.currentTime);
-        thud.stop(ac.currentTime + 0.7);
-
-        // Layer 2: airy sweep
-        const sweep = ac.createOscillator();
-        const sweepGain = ac.createGain();
-        sweep.type = 'sine';
-        sweep.frequency.setValueAtTime(320, ac.currentTime + 0.05);
-        sweep.frequency.exponentialRampToValueAtTime(80, ac.currentTime + 2.5);
-        sweepGain.gain.setValueAtTime(0, ac.currentTime);
-        sweepGain.gain.linearRampToValueAtTime(0.18, ac.currentTime + 0.15);
-        sweepGain.gain.exponentialRampToValueAtTime(0.001, ac.currentTime + 2.8);
-        sweep.connect(sweepGain);
-        sweepGain.connect(ac.destination);
-        sweep.start(ac.currentTime + 0.05);
-        sweep.stop(ac.currentTime + 2.8);
-
-        // Layer 3: shimmer (high harmonic)
-        const shimmer = ac.createOscillator();
-        const shimmerGain = ac.createGain();
-        shimmer.type = 'sine';
-        shimmer.frequency.setValueAtTime(1200, ac.currentTime + 0.1);
-        shimmer.frequency.exponentialRampToValueAtTime(400, ac.currentTime + 1.8);
-        shimmerGain.gain.setValueAtTime(0, ac.currentTime + 0.1);
-        shimmerGain.gain.linearRampToValueAtTime(0.06, ac.currentTime + 0.3);
-        shimmerGain.gain.exponentialRampToValueAtTime(0.001, ac.currentTime + 2.2);
-        shimmer.connect(shimmerGain);
-        shimmerGain.connect(ac.destination);
-        shimmer.start(ac.currentTime + 0.1);
-        shimmer.stop(ac.currentTime + 2.2);
-      } catch(e) {}
+      const sfx = new Audio('sounds/Portfolio Intro.mp3'); sfx.play();
     }
 
     (function() {
