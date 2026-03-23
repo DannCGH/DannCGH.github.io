@@ -700,7 +700,7 @@
 
     .project-row {
       display: grid;
-      grid-template-columns: 280px 1fr;
+      grid-template-columns: 420px 1fr;
       border-bottom: 1px solid var(--border);
       transition: background 0.2s;
       position: relative;
@@ -722,6 +722,26 @@
     }
 
     .project-row:hover::before { transform: scaleY(1); }
+
+    .project-image {
+      background: var(--bg3);
+      border-right: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      min-height: 180px;
+    }
+
+    .project-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      opacity: 0.7;
+      transition: opacity 0.3s;
+    }
+
+    .project-row:hover .project-image img { opacity: 1; }
 
     .project-image {
       background: var(--bg3);
@@ -760,16 +780,6 @@
       letter-spacing: 0.12em;
       opacity: 0.35;
     }
-
-    .project-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0.7;
-      transition: opacity 0.3s;
-    }
-
-    .project-row:hover .project-image img { opacity: 1; }
 
     .project-info {
       padding: 2rem 2.2rem;
@@ -1182,7 +1192,8 @@
       .stats-bar { flex-wrap: wrap; }
       .stat { flex: 1 1 45%; }
       .project-row { grid-template-columns: 1fr; }
-      .project-image { min-height: 140px; border-right: none; border-bottom: 1px solid var(--border); }
+      .project-image { min-height: 200px; border-right: none; border-bottom: 1px solid var(--border); }
+      .project-image img { width: 100%; height: auto; }
       .personal-about { grid-template-columns: 1fr 1fr; padding: 0 1.5rem; }
       .media-section { padding: 3rem 1.5rem; }
       .shelf-card { flex: 0 0 130px; }
@@ -1259,7 +1270,7 @@
       </div>
       <div class="projects-list">
         <div class="project-row reveal">
-          <div class="project-image"><div class="project-image-placeholder"><div class="proj-num">01</div><span data-en="Project Image" data-es="Imagen">Project Image</span></div></div>
+          <div class="project-image"><img src="images/Projects/AllDayTours.png" alt="AllDayTours"></div>
           <div class="project-info">
             <h3 class="project-name">AllDayTours</h3>
             <p class="project-desc" data-en="A custom-engineered, bilingual booking platform for a Florida-based charter fleet, featuring real-time seat reservations and a dynamic, 50-location point-to-point transfer system." data-es="Plataforma de reservas personalizada, bilingüe para un flota de cruceros en Florida, con reservas en tiempo real y un sistema dinámico de transferencia punto a punto en 50 ubicaciones.">A custom-engineered, bilingual booking platform for a Florida-based charter fleet, featuring real-time seat reservations and a dynamic, 50-location point-to-point transfer system.</p>
@@ -1304,9 +1315,9 @@
           </div>
         </div>
         <div class="project-row reveal">
-          <div class="project-image"><div class="project-image-placeholder"><div class="proj-num">06</div><span data-en="Project Image" data-es="Imagen">Project Image</span></div></div>
+          <div class="project-image"><img src="images/Projects/Best-Places-to-Live-by-Income.png" alt="Best Places to Live by Income"></div>
           <div class="project-info">
-            <h3 class="project-name">Best Places to Live By Income</h3>
+            <h3 class="project-name">Best Places to Live by Income</h3>
             <p class="project-desc" data-en="Developed an interactive housing affordability tool using JavaScript that maps Miami neighborhoods by real-time income-to-rent ratios to improve local financial literacy." data-es="Desarrollé una herramienta interactiva de asequibilidad de vivienda usando JavaScript que mapea los vecindarios de Miami por medio de las proporciones de ingresos a alquiler en tiempo real para mejorar la literatura financiera local.">Developed an interactive housing affordability tool using JavaScript that maps Miami neighborhoods by real-time income-to-rent ratios to improve local financial literacy.</p>
             <div class="project-tags"><span class="tag">JavaScript</span><span class="tag">Leaflet.js</span><span class="tag">Chart.js</span><span class="tag">JSON</span></div>
             <a href="#" class="project-link" data-en="View Project →" data-es="Ver Proyecto →">View Project →</a>
